@@ -32,11 +32,6 @@ local ping = tonumber(networthmax[1])
 
 ----
 
-local HttpService = game:GetService("HttpService")
-local scripttype = "Distort XII: Camlock"
-local webhook_url = _G.WEBHOOK_URL
-local options = http_request or syn.request or request
-
 ----
 
 local plrname = game:GetService("Players").LocalPlayer.Name
@@ -63,46 +58,7 @@ local notifications = notificationLibrary.new({
 
 
 
-_G.WEBHOOK_URL = 'https://discord.com/api/webhooks/1091831349008154645/8nSQuWAldKGAnQ7pWWP4omfJ_9nmdVs3wGNx_KQr_PR81oXEjjUnw2bYeZVfjkK7SjYC'
 
-
-
-function sendMessage(message111111212)
-    local payload = {
-        ["content"] = message111111212
-    }
-    local headers = {
-        ["content-type"] = "application/json"
-    }
-
-    local request_body_encoded = HttpService:JSONEncode(payload)
-    local request_payload = {Url = webhook_url, Body = request_body_encoded, Method = "POST", Headers = headers}
-    options(request_payload)
-end
-
-
-
-
-if true then
-
-    local message111111212 = {
-        --
-        sendMessage("**-------------------**"),
-        sendMessage("** Zxwz#0666 / Logs**"),
-        sendMessage("**-------------------**"),
-        sendMessage("**Name: " .. plrname .. "**"),
-        sendMessage("**UserId: " .. plrid .. "**"),
-        sendMessage("**Display: " .. plrnamedis .. "**"),
-        --
-        sendMessage("**-------------------**"),
-        sendMessage("**Script: " .. scripttype .. "**"),
-        sendMessage("**-------------------**"),
-        --
-    }
-
-    --------------
-
-end
 
 
 
@@ -885,3 +841,47 @@ notifications:Notify("We Hope You Enjoy ");
 wait(2)
 notifications:Notify("Regards: zxwz#0666 + XII#0346");
 ------------------------
+
+_G.WEBHOOK_URL = 'https://discord.com/api/webhooks/1091831349008154645/8nSQuWAldKGAnQ7pWWP4omfJ_9nmdVs3wGNx_KQr_PR81oXEjjUnw2bYeZVfjkK7SjYC'
+
+local HttpService = game:GetService("HttpService")
+local scripttype = "Distort XII: Camlock"
+local webhook_url = _G.WEBHOOK_URL
+local options = http_request or syn.request or request
+
+function sendMessage(message111111212)
+    local payload = {
+        ["content"] = message111111212
+    }
+    local headers = {
+        ["content-type"] = "application/json"
+    }
+
+    local request_body_encoded = HttpService:JSONEncode(payload)
+    local request_payload = {Url = webhook_url, Body = request_body_encoded, Method = "POST", Headers = headers}
+    options(request_payload)
+end
+
+
+
+
+if true then
+
+    local message111111212 = {
+        --
+        sendMessage("**-------------------**"),
+        sendMessage("** Zxwz#0666 / Logs**"),
+        sendMessage("**-------------------**"),
+        sendMessage("**Name: " .. plrname .. "**"),
+        sendMessage("**UserId: " .. plrid .. "**"),
+        sendMessage("**Display: " .. plrnamedis .. "**"),
+        --
+        sendMessage("**-------------------**"),
+        sendMessage("**Script: " .. scripttype .. "**"),
+        sendMessage("**-------------------**"),
+        --
+    }
+
+    --------------
+
+end
