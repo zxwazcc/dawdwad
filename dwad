@@ -194,7 +194,7 @@ end
 
 -- Main Functions -- 
 
-local camlock_enable = true
+local camlock_enable = false
  
  function GetNearestTargetToPlayerCAMLOCK()
      local target
