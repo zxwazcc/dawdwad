@@ -1,3 +1,5 @@
+local Distort_Cams = {functions = {}}
+
 -----------------------------------------------------------
 
 -- MAIN LOCALS
@@ -235,7 +237,7 @@ end
 
 -- Main Functions -- 
 
-local camlock_enable = false
+local camlock_enable = true
  
  function GetNearestTargetToPlayerCAMLOCK()
      local target
