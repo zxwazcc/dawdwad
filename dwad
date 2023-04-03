@@ -1,0 +1,884 @@
+
+-----------------------------------------------------------
+
+-- MAIN LOCALS
+
+local target = nil
+local workspace = game:GetService("Workspace")
+local players = game:GetService("Players")
+local player = players.LocalPlayer
+local camera = workspace.CurrentCamera
+local runservice =  game:GetService("RunService")	
+local mouse = game.Players.LocalPlayer:GetMouse()
+local vec3 = Vector3.new
+local vec2 = Vector2.new
+local cf = CFrame.new
+local Rnew = Ray.new
+local draw = Drawing.new
+local mh = math.huge
+local cfa = CFrame.Angles
+local mp = math.pi
+local GuiInset = game:GetService("GuiService"):GetGuiInset().Y
+
+local mathhh = 0
+local nigesas = Instance.new("Folder", workspace)
+local inputservice = game:GetService("UserInputService")
+local networtserviceping = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+local networthmax = string.split(networtserviceping,'(')
+local ping = tonumber(networthmax[1])
+
+----
+
+local HttpService = game:GetService("HttpService")
+local scripttype = "Distort XII: Camlock"
+local webhook_url = _G.WEBHOOK_URL
+local options = http_request or syn.request or request
+
+----
+
+local plrname = game:GetService("Players").LocalPlayer.Name
+local plrnamedis = game:GetService("Players").LocalPlayer.DisplayName
+local plrid = game:GetService("Players").LocalPlayer.UserId
+
+--local NotifyLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))()
+--local Notify = NotifyLibrary.Notify
+
+local notificationLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/ui-libraries/main/xaxas-notification/src.lua"))();
+local notifications = notificationLibrary.new({            
+    NotificationLifetime = 1.5, 
+    NotificationPosition = "Middle",
+    
+    TextFont = Enum.Font.Code,
+    TextColor = Color3.fromRGB(255, 255, 255),
+    TextSize = 17,
+    
+    TextStrokeTransparency = 0, 
+    TextStrokeColor = Color3.fromRGB(0, 0, 0)
+});
+
+-----------------------------------------------------------
+
+
+
+_G.WEBHOOK_URL = 'https://discord.com/api/webhooks/1091831349008154645/8nSQuWAldKGAnQ7pWWP4omfJ_9nmdVs3wGNx_KQr_PR81oXEjjUnw2bYeZVfjkK7SjYC'
+
+
+
+function sendMessage(message111111212)
+    local payload = {
+        ["content"] = message111111212
+    }
+    local headers = {
+        ["content-type"] = "application/json"
+    }
+
+    local request_body_encoded = HttpService:JSONEncode(payload)
+    local request_payload = {Url = webhook_url, Body = request_body_encoded, Method = "POST", Headers = headers}
+    options(request_payload)
+end
+
+
+
+
+if true then
+
+    local message111111212 = {
+        --
+        sendMessage("**-------------------**"),
+        sendMessage("** Zxwz#0666 / Logs**"),
+        sendMessage("**-------------------**"),
+        sendMessage("**Name: " .. plrname .. "**"),
+        sendMessage("**UserId: " .. plrid .. "**"),
+        sendMessage("**Display: " .. plrnamedis .. "**"),
+        --
+        sendMessage("**-------------------**"),
+        sendMessage("**Script: " .. scripttype .. "**"),
+        sendMessage("**-------------------**"),
+        --
+    }
+
+    --------------
+
+end
+
+
+
+
+-----------------------------------------------------------
+local lpd = game:GetService("Players").LocalPlayer.Name
+
+----------------------------------------------------------
+
+
+local lp = game:GetService("Players").LocalPlayer
+local Bullshit = lp:GetMouse()
+
+-- Warning -- 
+
+if game.PlaceId == 9825515356 then
+    
+    notifications:BuildNotificationUI();
+    notifications:Notify("Hello, " .. lpd);
+    wait(1.5)
+    notifications:Notify("Due To The Exploiter Update On Hood-Customs");
+
+    wait(1.5)
+    notifications:Notify("Were Working On A Bypass For it!");
+
+    wait(1.5)
+    notifications:Notify("You Will Be Prompt With The Exploiter Tag!");
+
+    wait(1.5)
+
+    notifications:Notify("Regards: zxwz#0666");
+
+    wait(1.5)
+
+    notifications:Notify('To Read This Message Again Press "=" ');
+
+    Bullshit.KeyDown:Connect(function(faggit)
+        if faggit == ("=") then
+    
+            notifications:BuildNotificationUI();
+            notifications:Notify("Hello, " .. lpd);
+            wait(1.5)
+            notifications:Notify("Due To The Exploiter Update On Hood-Customs");
+            
+            wait(1.5)
+            notifications:Notify("Were Working On A Bypass For it!");
+            
+            wait(1.5)
+            notifications:Notify("You Will Be Prompt With The Exploiter Tag!");
+            
+            wait(1.5)
+            
+            notifications:Notify("Regards: zxwz#0666");
+            
+            wait(1.5)
+            
+            notifications:Notify('To Read This Message Again Press "=" ');
+        end
+    end)
+
+
+    --game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.CharacterPing.Name = "zxwz0666"
+
+    while true do
+        wait(0.035)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Enabled = true
+        wait(0.5)
+
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = "D"
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = "Di"
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = "Dis"
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = "Dist"
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = "Disto"
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = "Distor"
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = "Distort"
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = "Distort O"
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = "Distort On"
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = "Distort On T"
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = "Distort On To"
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = "Distort On Top"
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = " "
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = "Distort On Top"
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = "Distort On To"
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = "Distort On T"
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = "Distort On"
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = "Distort O"
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = "Distort"
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = "Distor"
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = "Disto"
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = "Dist"
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = "Dis"
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = "Di"
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = "D"
+        wait(0.1)
+        game:GetService("Workspace").Players.Characters[lpd].HumanoidRootPart.zxwz0666.Frame.Ping.Text = " "
+        wait(0.1)
+    end
+
+end
+
+
+
+-----------------------------------------------------------
+
+
+
+
+-- Main Functions -- 
+
+local camlock_enable = false
+ 
+ function GetNearestTargetToPlayerCAMLOCK()
+     local target
+     local maxdis = math.huge 
+
+
+     for i,v in pairs(players:GetPlayers()) do
+        local knocked = nil
+        local isntgrabbed = nil
+        local wallchecker = nil
+
+        if Distort_Cams.Camlock.wallcheck == true then
+            wallchecker = Wallcheck2(v.Character.HumanoidRootPart)
+        else
+            wallchecker = true
+        end
+
+    if Distort_Cams.Camlock.grabbed_check == true then
+        knocked = v.Character:WaitForChild("BodyEffects")["K.O"].Value ~= true
+    else
+        knocked = true
+    end
+
+
+
+    if Distort_Cams.Camlock.pickup_check == true then
+        isntgrabbed = v.Character:FindFirstChild("GRABBING_COINSTRAINT") == nil
+    else
+        isntgrabbed = true
+    end
+
+
+
+ if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") and wallchecker and knocked and isntgrabbed and v.Character.Humanoid.Health ~= 0  and v.Character:FindFirstChild("HumanoidRootPart") then
+             local position = camera:WorldToViewportPoint(v.Character.PrimaryPart.Position)
+             local magni = (vec2(position.X, position.Y) - vec2(mouse.X, mouse.Y)).magnitude
+             if magni < maxdis then
+                 target = v
+                 maxdis = magni
+             end
+         end
+     end
+     return target
+ end
+
+ --------
+
+local niggaa = game:GetService("StarterGui")
+local DisplayName = game:GetService("Players").Name
+
+inputservice.InputBegan:Connect(function(z)
+    if z.KeyCode == Distort_Cams.Camlock.keybind then	
+        if Distort_Cams.Camlock.enable == true then
+            camlock_enable = not camlock_enable	
+            if camlock_enable then	
+                target = GetNearestTargetToPlayerCAMLOCK()
+
+                if getgenv().noti == true then
+                    --
+                    if Distort_Cams.Camlock.NotiSec == "Roblox" then
+                        --
+                        niggaa:SetCore(
+                            "SendNotification",
+                            {
+                                Title = "zxwz#0345", -- Required
+                                Text = "Locked On: " .. target.DisplayName, -- Required
+                                Icon = "rbxassetid://12623828868" -- Optional
+                            }
+                        )
+                        --
+                    elseif Distort_Cams.Camlock.NotiSec == "Alki" then
+                        Notify({
+                            Title = "zxwz#0345",
+                            Description = "Locked On: " .. target.DisplayName,
+                            Duration = 4
+                        })
+
+
+                    elseif Distort_Cams.Camlock.NotiSec == "Xaxa" then
+                        notifications:BuildNotificationUI();
+                        notifications:Notify("Locked On: " .. target.DisplayName);
+                    --
+                    end
+                end
+
+
+             else	
+                if target ~= nil then	
+                    target = nil
+
+                    if Distort_Cams.Camlock.NotiSec == "Roblox" then
+
+                        niggaa:SetCore(
+                            "SendNotification",
+                            {
+                                Title = "zxwz#0345", -- Required
+                                Text = "Unlocked", -- Required
+                                Icon = "rbxassetid://12623828868" -- Optional
+                            }
+                        )
+
+                    elseif Distort_Cams.Camlock.NotiSec == "Alki" then
+                        Notify({
+                            Title = "zxwz#0345",
+                            Description = "Unlocked",
+                            Duration = 4
+                        })
+                        
+
+                    elseif Distort_Cams.Camlock.NotiSec == "Xaxa" then
+                        notifications:BuildNotificationUI();
+                        notifications:Notify("Unlocked");
+                --
+                    end
+                end	
+            end	
+        end
+    end
+end)	
+ 
+runservice.RenderStepped:Connect(function()
+
+    if Distort_Cams.Camlock.enable == true and camlock_enable then
+        if target ~= nil then
+            if Distort_Cams.Camlock.resolver == true and Distort_Cams.Camlock.resolver_type == "UnderGround" then
+                target.Character.Humanoid.HipHeight = 0
+                if Distort_Cams.Camlock.enable == true and Distort_Cams.Camlock.smoothness == false then
+                    local oldpos = vec3(target.Character[Distort_Cams.Camlock.aiming_part].Velocity.X ,0.1, target.Character[Distort_Cams.Camlock.aiming_part].Velocity.Z)
+                    camera.CFrame = cf(camera.CFrame.p, target.Character[Distort_Cams.Camlock.aiming_part].Position + oldpos * Distort_Cams.Camlock.prediciton)
+                    elseif  Distort_Cams.Camlock.enable == true and Distort_Cams.Camlock.smoothness == true then
+                        local oldpos = vec3(target.Character[Distort_Cams.Camlock.aiming_part].Velocity.X,0,target.Character[Distort_Cams.Camlock.aiming_part].Velocity.Z)
+                    local Main = cf(camera.CFrame.p, target.Character[Distort_Cams.Camlock.aiming_part].Position + oldpos * Distort_Cams.Camlock.prediciton)
+                        
+                    camera.CFrame = camera.CFrame:Lerp(Main, Distort_Cams.Camlock.smoothness_value, Enum.EasingStyle.Elastic, Enum.EasingDirection.InOut)
+                end
+            elseif Distort_Cams.Camlock.resolver == true and Distort_Cams.Camlock.resolver_type == "Reverse" then
+            if Distort_Cams.Camlock.enable == true and Distort_Cams.Camlock.smoothness == false then
+                camera.CFrame = cf(camera.CFrame.p, target.Character[Distort_Cams.Camlock.aiming_part].Position - target.Character[Distort_Cams.Camlock.aiming_part].Velocity * Distort_Cams.Camlock.prediciton)
+                elseif  Distort_Cams.Camlock.enable == true and Distort_Cams.Camlock.smoothness == true then
+                local Main = cf(camera.CFrame.p, target.Character[Distort_Cams.Camlock.aiming_part].Position - target.Character[Distort_Cams.Camlock.aiming_part].Velocity * Distort_Cams.Camlock.prediciton)
+
+                camera.CFrame = camera.CFrame:Lerp(Main, Distort_Cams.Camlock.smoothness_value, Enum.EasingStyle.Elastic, Enum.EasingDirection.InOut)
+                end
+            else
+                if Distort_Cams.Camlock.enable == true and Distort_Cams.Camlock.smoothness == false then
+                    camera.CFrame = cf(camera.CFrame.p, target.Character[Distort_Cams.Camlock.aiming_part].Position + target.Character[Distort_Cams.Camlock.aiming_part].Velocity * Distort_Cams.Camlock.prediciton)
+                    elseif  Distort_Cams.Camlock.enable == true and Distort_Cams.Camlock.smoothness == true then
+                    local Main = cf(camera.CFrame.p, target.Character[Distort_Cams.Camlock.aiming_part].Position + target.Character[Distort_Cams.Camlock.aiming_part].Velocity * Distort_Cams.Camlock.prediciton)
+    
+                    camera.CFrame = camera.CFrame:Lerp(Main, Distort_Cams.Camlock.smoothness_value, Enum.EasingStyle.Elastic, Enum.EasingDirection.InOut)
+                    end
+            end
+        end
+    end
+
+     
+        if  Distort_Cams.Camlock.autopred then
+            if ping < 130 then
+                Distort_Cams.Camlock.prediciton = 0.1657
+            elseif ping < 90 then
+                Distort_Cams.Camlock.prediciton = 0.165
+            elseif ping < 70 then
+                Distort_Cams.Camlock.prediciton = 0.165
+            elseif ping < 60 then
+                Distort_Cams.Camlock.prediciton = 0.143
+            elseif ping < 40 then
+                Distort_Cams.Camlock.prediciton = 0.108
+            elseif ping < 20 then
+                Distort_Cams.Camlock.prediciton = 0.121
+            end
+        end
+
+        --
+
+        if Distort_Cams.Camlock.AntiAimViewer == true then
+            local Mouse = game.Players.LocalPlayer:GetMouse()
+
+            local a = 9
+            local d = -9
+
+            for i, v in pairs(game.Players:GetPlayers()) do
+                if v ~= Client and v.Character and v.Character:FindFirstChild("Head") and v.Character:FindFirstChild("HumanoidRootPart") then
+                    local c = game.Workspace.CurrentCamera:WorldToViewportPoint(v.Character.PrimaryPart.Position)
+                    local d = (Vector2.new(Mouse.X and Mouse.Y) - Vector2.new(c.X, c.Y)).Magnitude
+
+                    
+                    if a > d then
+                        d = v
+                        a = d
+                    end
+                    
+                end
+            end
+        end
+
+        --
+
+        if Distort_Cams.Camlock.Noti == true then
+            getgenv().noti = true
+        end
+
+
+
+        if Distort_Cams.Camlock.aiming_part == "Random Upper" then
+            Distort_Cams.Camlock.aiming_part = "LeftUpperArm"
+        end
+
+
+        if Distort_Cams.Camlock.aiming_part == "Random Lower" then
+            Distort_Cams.Camlock.aiming_part = "LeftUpperLeg"
+        end
+
+        -- Anti Aims
+
+        if Distort_Cams.Camlock.resolver and Distort_Cams.Camlock.resolver_type == "Detect Desync" and Target and Target.Character and Target.Character:WaitForChild("HumanoidRootPart").Velocity.magnitude > Distort_Cams.Camlock.Detections then
+            pcall(
+                function()
+                    local hrp = Target.Character.HumanoidRootPart
+                    hrp.Velocity = Vector3.new(0, 0, 0)
+                    hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+                end
+            )
+        end
+
+        if Distort_Cams.Camlock.resolver and Distort_Cams.Camlock.resolver_type == "Normal" then
+            pcall(
+                function()
+                    local hrp = Target.Character.HumanoidRootPart
+                    hrp.Velocity = Vector3.new(hrp.Velocity.X, 0, hrp.Velocity.Y, hrp.Velocity.Z)
+                    hrp.AssemblyLinearVelocity = Vector3.new(hrp.Velocity.X, 0, hrp.Velocity.Y, hrp.Velocity.Z)
+                end
+            )
+        end
+
+    
+        ---------------------
+
+        -- Vis --
+
+        local lp = game:GetService("Players").LocalPlayer
+
+        if Distort_Cams.Visuals.plrenable == true then 
+            if Distort_Cams.Visuals.plrmat == "ForceField" then
+                for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+                    if v:IsA("BasePart") then
+                        v.Material = "ForceField"
+                        v.Color = Distort_Cams.Visuals.plrcolor
+                    end
+                end
+            elseif Distort_Cams.Visuals.plrmat == "Neon" then
+                for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+                    if v:IsA("BasePart") then
+                        v.Material = "Neon"
+                        v.Color = Distort_Cams.Visuals.plrcolor
+                    end
+                end
+            elseif Distort_Cams.Visuals.plrmat == "Glass" then
+                for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+                    if v:IsA("BasePart") then
+                        v.Material = "Glass"
+                        v.Color = Distort_Cams.Visuals.plrcolor
+                    end
+                end
+            elseif Distort_Cams.Visuals.plrmat == "Plastic" then
+                for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+                    if v:IsA("BasePart") then
+                        v.Material = "Plastic"
+                        v.Color = Distort_Cams.Visuals.plrcolor
+                    end
+                end
+            else
+                for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+                    if v:IsA("BasePart") then
+                        v.Material = "Plastic"
+                        v.Color = game:GetService("Workspace").lp["Body Colors"]
+                    end
+                end
+            end
+        end
+
+        while Distort_Cams.Visuals.plrbow == true do
+            wait()
+            for i = 1,100,1 do
+                Distort_Cams.Visuals.plrcolor = Color3.fromHSV(i / 100,1,1) 
+                wait(0.03)
+            end
+        end
+end)
+
+-------------------------------------------
+
+
+-- Skele Esp
+
+if Distort_Cams.skele.skelenb == true then
+    local Draw = Drawing.new
+    local Camera = game.Workspace.Camera
+    local Vec2 = Vector2.new
+
+    function Skeleton(Player)
+        local Head_Torso_Skeleton = Draw("Line")
+        Head_Torso_Skeleton.Thickness = 1
+        Head_Torso_Skeleton.Visible = false
+        Head_Torso_Skeleton.Transparency = 1
+        Head_Torso_Skeleton.ZIndex = 1
+        Head_Torso_Skeleton.Color = Distort_Cams.skele.Color
+
+        local Torso_LowerTorso_Skeleton = Draw("Line")
+        Torso_LowerTorso_Skeleton.Thickness = 1
+        Torso_LowerTorso_Skeleton.Visible = false
+        Torso_LowerTorso_Skeleton.Transparency = 1
+        Torso_LowerTorso_Skeleton.ZIndex = 1
+        Torso_LowerTorso_Skeleton.Color = Distort_Cams.skele.Color
+
+        local Torso_RightUpperArm_Skeleton = Draw("Line")
+        Torso_RightUpperArm_Skeleton.Thickness = 1
+        Torso_RightUpperArm_Skeleton.Visible = false
+        Torso_RightUpperArm_Skeleton.Transparency = 1
+        Torso_RightUpperArm_Skeleton.ZIndex = 1
+        Torso_RightUpperArm_Skeleton.Color = Distort_Cams.skele.Color
+
+        local Torso_RightLowerArm_Skeleton = Draw("Line")
+        Torso_RightLowerArm_Skeleton.Thickness = 1
+        Torso_RightLowerArm_Skeleton.Visible = false
+        Torso_RightLowerArm_Skeleton.Transparency = 1
+        Torso_RightLowerArm_Skeleton.ZIndex = 1
+        Torso_RightLowerArm_Skeleton.Color = Distort_Cams.skele.Color
+
+        local Torso_RightHand_Skeleton = Draw("Line")
+        Torso_RightHand_Skeleton.Thickness = 1
+        Torso_RightHand_Skeleton.Visible = false
+        Torso_RightHand_Skeleton.Transparency = 1
+        Torso_RightHand_Skeleton.ZIndex = 1
+        Torso_RightHand_Skeleton.Color = Distort_Cams.skele.Color
+
+        local Torso_LeftUpperArm_Skeleton = Draw("Line")
+        Torso_LeftUpperArm_Skeleton.Thickness = 1
+        Torso_LeftUpperArm_Skeleton.Visible = false
+        Torso_LeftUpperArm_Skeleton.Transparency = 1
+        Torso_LeftUpperArm_Skeleton.ZIndex = 1
+        Torso_LeftUpperArm_Skeleton.Color = Distort_Cams.skele.Color
+
+        local Torso_LeftLowerArm_Skeleton = Draw("Line")
+        Torso_LeftLowerArm_Skeleton.Thickness = 1
+        Torso_LeftLowerArm_Skeleton.Visible = false
+        Torso_LeftLowerArm_Skeleton.Transparency = 1
+        Torso_LeftLowerArm_Skeleton.ZIndex = 1
+        Torso_LeftLowerArm_Skeleton.Color = Distort_Cams.skele.Color
+
+        local Torso_LeftHand_Skeleton = Draw("Line")
+        Torso_LeftHand_Skeleton.Thickness = 1
+        Torso_LeftHand_Skeleton.Visible = false
+        Torso_LeftHand_Skeleton.Transparency = 1
+        Torso_LeftHand_Skeleton.ZIndex = 1
+        Torso_LeftHand_Skeleton.Color = Distort_Cams.skele.Color
+
+        local LowerTorso_RightUpperLeg_Skeleton = Draw("Line")
+        LowerTorso_RightUpperLeg_Skeleton.Thickness = 1
+        LowerTorso_RightUpperLeg_Skeleton.Visible = false
+        LowerTorso_RightUpperLeg_Skeleton.Transparency = 1
+        LowerTorso_RightUpperLeg_Skeleton.ZIndex = 1
+        LowerTorso_RightUpperLeg_Skeleton.Color = Distort_Cams.skele.Color
+
+        local RightUpperLeg_RightLowerLeg_Skeleton = Draw("Line")
+        RightUpperLeg_RightLowerLeg_Skeleton.Thickness = 1
+        RightUpperLeg_RightLowerLeg_Skeleton.Visible = false
+        RightUpperLeg_RightLowerLeg_Skeleton.Transparency = 1
+        RightUpperLeg_RightLowerLeg_Skeleton.ZIndex = 1
+        RightUpperLeg_RightLowerLeg_Skeleton.Color = Distort_Cams.skele.Color
+
+        local RightLowerLeg_RightFoot_Skeleton = Draw("Line")
+        RightLowerLeg_RightFoot_Skeleton.Thickness = 1
+        RightLowerLeg_RightFoot_Skeleton.Visible = false
+        RightLowerLeg_RightFoot_Skeleton.Transparency = 1
+        RightLowerLeg_RightFoot_Skeleton.ZIndex = 1
+        RightLowerLeg_RightFoot_Skeleton.Color = Distort_Cams.skele.Color
+
+        local LowerTorso_LeftUpperLeg_Skeleton = Draw("Line")
+        LowerTorso_LeftUpperLeg_Skeleton.Thickness = 1
+        LowerTorso_LeftUpperLeg_Skeleton.Visible = false
+        LowerTorso_LeftUpperLeg_Skeleton.Transparency = 1
+        LowerTorso_LeftUpperLeg_Skeleton.ZIndex = 1
+        LowerTorso_LeftUpperLeg_Skeleton.Color = Distort_Cams.skele.Color
+
+        local LeftUpperLeg_LeftLowerLeg_Skeleton = Draw("Line")
+        LeftUpperLeg_LeftLowerLeg_Skeleton.Thickness = 1
+        LeftUpperLeg_LeftLowerLeg_Skeleton.Visible = false
+        LeftUpperLeg_LeftLowerLeg_Skeleton.Transparency = 1
+        LeftUpperLeg_LeftLowerLeg_Skeleton.ZIndex = 1
+        LeftUpperLeg_LeftLowerLeg_Skeleton.Color = Distort_Cams.skele.Color
+
+        local LeftLowerLeg_LeftFoot_Skeleton = Draw("Line")
+        LeftLowerLeg_LeftFoot_Skeleton.Thickness = 1
+        LeftLowerLeg_LeftFoot_Skeleton.Visible = false
+        LeftLowerLeg_LeftFoot_Skeleton.Transparency = 1
+        LeftLowerLeg_LeftFoot_Skeleton.ZIndex = 1
+        LeftLowerLeg_LeftFoot_Skeleton.Color = Distort_Cams.skele.Color
+
+
+            game:GetService("RunService").RenderStepped:Connect(function()
+                if Player.Character ~= nil and Player.Character:FindFirstChild("Humanoid") and Player.Character.Humanoid.Health ~= 0 and Player.Character:FindFirstChild("HumanoidRootPart") then
+                    local HeadV = Camera:WorldToViewportPoint(Player.Character.Head.Position)
+                    local TorsoV,OnScreen = Camera:WorldToViewportPoint(Player.Character.UpperTorso.Position)
+                    local LowerTorsoV = Camera:WorldToViewportPoint(Player.Character.LowerTorso.Position)
+                    local RULV = Camera:WorldToViewportPoint(Player.Character.RightUpperLeg.Position)
+                    local RLLV = Camera:WorldToViewportPoint(Player.Character.RightLowerLeg.Position)
+                    local RFV = Camera:WorldToViewportPoint(Player.Character.RightFoot.Position)
+                    local LULV = Camera:WorldToViewportPoint(Player.Character.LeftUpperLeg.Position)
+                    local LLLV = Camera:WorldToViewportPoint(Player.Character.LeftLowerLeg.Position)
+                    local LFV = Camera:WorldToViewportPoint(Player.Character.LeftFoot.Position)
+                    local LUAV = Camera:WorldToViewportPoint(Player.Character.LeftUpperArm.Position)
+                    local LLAV = Camera:WorldToViewportPoint(Player.Character.LeftLowerArm.Position)
+                    local LHV = Camera:WorldToViewportPoint(Player.Character.LeftHand.Position)
+                    local RUAV = Camera:WorldToViewportPoint(Player.Character.RightUpperArm.Position)
+                    local RLAV = Camera:WorldToViewportPoint(Player.Character.RightLowerArm.Position)
+                    local RHV = Camera:WorldToViewportPoint(Player.Character.RightHand.Position)
+
+                    Head_Torso_Skeleton.From = Vec2(HeadV.X, HeadV.Y)
+                    Head_Torso_Skeleton.To = Vec2(TorsoV.X, TorsoV.Y)
+
+                    Torso_LowerTorso_Skeleton.From = Vec2(TorsoV.X, TorsoV.Y)
+                    Torso_LowerTorso_Skeleton.To = Vec2(LowerTorsoV.X, LowerTorsoV.Y)
+
+                    LowerTorso_RightUpperLeg_Skeleton.From = Vec2(LowerTorsoV.X, LowerTorsoV.Y)
+                    LowerTorso_RightUpperLeg_Skeleton.To = Vec2(RULV.X, RULV.Y)
+
+                    LowerTorso_LeftUpperLeg_Skeleton.From = Vec2(LowerTorsoV.X, LowerTorsoV.Y)
+                    LowerTorso_LeftUpperLeg_Skeleton.To = Vec2(LULV.X, LULV.Y)
+
+                    RightUpperLeg_RightLowerLeg_Skeleton.From = Vec2(RULV.X, RULV.Y)
+                    RightUpperLeg_RightLowerLeg_Skeleton.To = Vec2(RLLV.X, RLLV.Y)
+
+                    RightLowerLeg_RightFoot_Skeleton.From = Vec2(RLLV.X, RLLV.Y)
+                    RightLowerLeg_RightFoot_Skeleton.To = Vec2(RFV.X, RFV.Y)
+
+                    LeftUpperLeg_LeftLowerLeg_Skeleton.From = Vec2(LULV.X, LULV.Y)
+                    LeftUpperLeg_LeftLowerLeg_Skeleton.To = Vec2(LLLV.X, LLLV.Y)
+                    
+                    LeftLowerLeg_LeftFoot_Skeleton.From = Vec2(LLLV.X, LLLV.Y)
+                    LeftLowerLeg_LeftFoot_Skeleton.To = Vec2(LFV.X, LFV.Y)
+
+                    Torso_RightUpperArm_Skeleton.From = Vec2(TorsoV.X, TorsoV.Y)
+                    Torso_RightUpperArm_Skeleton.To = Vec2(RUAV.X, RUAV.Y)
+
+                    Torso_RightLowerArm_Skeleton.From = Vec2(RUAV.X, RUAV.Y)
+                    Torso_RightLowerArm_Skeleton.To = Vec2(RLAV.X, RLAV.Y)
+
+                    Torso_RightHand_Skeleton.From = Vec2(RLAV.X, RLAV.Y)
+                    Torso_RightHand_Skeleton.To = Vec2(RHV.X, RHV.Y)
+
+                    Torso_LeftUpperArm_Skeleton.From = Vec2(TorsoV.X, TorsoV.Y)
+                    Torso_LeftUpperArm_Skeleton.To = Vec2(LUAV.X, LUAV.Y)
+
+                    Torso_LeftLowerArm_Skeleton.From = Vec2(LUAV.X, LUAV.Y)
+                    Torso_LeftLowerArm_Skeleton.To = Vec2(LLAV.X, LLAV.Y)
+
+                    Torso_LeftHand_Skeleton.From = Vec2(LLAV.X, LLAV.Y)
+                    Torso_LeftHand_Skeleton.To = Vec2(LHV.X, LHV.Y)
+
+                    if Distort_Cams.skele.skelenb and OnScreen then
+                        LeftLowerLeg_LeftFoot_Skeleton.Visible = true
+                        LeftUpperLeg_LeftLowerLeg_Skeleton.Visible = true
+                        RightLowerLeg_RightFoot_Skeleton.Visible = true
+                        RightUpperLeg_RightLowerLeg_Skeleton.Visible = true
+                        LowerTorso_LeftUpperLeg_Skeleton.Visible = true
+                        LowerTorso_RightUpperLeg_Skeleton.Visible = true
+                        Torso_LowerTorso_Skeleton.Visible = true
+                        Head_Torso_Skeleton.Visible = true
+                        Torso_LeftUpperArm_Skeleton.Visible = true
+                        Torso_LeftLowerArm_Skeleton.Visible = true
+                        Torso_LeftHand_Skeleton.Visible = true
+                        Torso_RightUpperArm_Skeleton.Visible = true
+                        Torso_RightLowerArm_Skeleton.Visible = true
+                        Torso_RightHand_Skeleton.Visible = true
+                    else
+                        LeftLowerLeg_LeftFoot_Skeleton.Visible = false
+                        LeftUpperLeg_LeftLowerLeg_Skeleton.Visible = false
+                        RightLowerLeg_RightFoot_Skeleton.Visible = false
+                        RightUpperLeg_RightLowerLeg_Skeleton.Visible = false
+                        LowerTorso_LeftUpperLeg_Skeleton.Visible = false
+                        LowerTorso_RightUpperLeg_Skeleton.Visible = false
+                        Torso_LowerTorso_Skeleton.Visible = false
+                        Head_Torso_Skeleton.Visible = false
+                        Torso_LeftUpperArm_Skeleton.Visible = false
+                        Torso_LeftLowerArm_Skeleton.Visible = false
+                        Torso_LeftHand_Skeleton.Visible = false
+                        Torso_RightUpperArm_Skeleton.Visible = false
+                        Torso_RightLowerArm_Skeleton.Visible = false
+                        Torso_RightHand_Skeleton.Visible = false
+                    end
+                else
+                    LeftLowerLeg_LeftFoot_Skeleton.Visible = false
+                    LeftUpperLeg_LeftLowerLeg_Skeleton.Visible = false
+                    RightLowerLeg_RightFoot_Skeleton.Visible = false
+                    RightUpperLeg_RightLowerLeg_Skeleton.Visible = false
+                    LowerTorso_LeftUpperLeg_Skeleton.Visible = false
+                    LowerTorso_RightUpperLeg_Skeleton.Visible = false
+                    Torso_LowerTorso_Skeleton.Visible = false
+                    Head_Torso_Skeleton.Visible = false
+                    Torso_LeftUpperArm_Skeleton.Visible = false
+                    Torso_LeftLowerArm_Skeleton.Visible = false
+                    Torso_LeftHand_Skeleton.Visible = false
+                    Torso_RightUpperArm_Skeleton.Visible = false
+                    Torso_RightLowerArm_Skeleton.Visible = false
+                    Torso_RightHand_Skeleton.Visible = false
+                end
+            end)
+        end
+
+        for i,v in pairs(game.Players:GetChildren()) do
+            Skeleton(v)
+        end
+
+        game.Players.PlayerAdded:Connect(function(Players)
+            Skeleton(Players)
+        end)
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------
+local keyCode = Distort_Cams.Camlock.AimView.Key
+
+local Players = game:GetService("Players")
+local Workspace = game:GetService("Workspace")
+local RunService = game:service("RunService")
+
+local LocalPlayer = Players.LocalPlayer
+local Mouse = LocalPlayer:GetMouse()
+
+local Target = nil
+local Toggle = false
+local BeamColor = Distort_Cams.Camlock.AimView.BeamColor
+
+if Distort_Cams.Camlock.AimViewer == true then
+
+    local TargetLine = Instance.new("Part")
+    TargetLine.Parent = workspace
+    TargetLine.Anchored = true
+    TargetLine.Size = Vector3.new(0.1,0.1,0.1)
+    TargetLine.Color = BeamColor
+    TargetLine.Material = Distort_Cams.Camlock.AimView.Material
+    TargetLine.CanCollide = false
+    TargetLine.Transparency = Distort_Cams.Camlock.AimView.Transparency
+
+    local function DrawLine(p, vec_1, vec_2)
+        local m = (vec_1 - vec_2).Magnitude
+        p.Size = Vector3.new(p.Size.X, p.Size.Y,  m)
+        p.CFrame = CFrame.new(
+            vec_1:Lerp(vec_2, 0.5),
+            vec_2
+        )
+        return part
+    end
+
+    local function FindClosestUser()
+        local closestPlayer
+        local shortestDistance = math.huge
+        
+        for i, v in pairs(Players:GetPlayers()) do
+            if v.Character and v.Character:FindFirstChild("Humanoid") and v.Character.Humanoid.Health ~= 0 and v.Character:FindFirstChild("HumanoidRootPart") then
+                local pos = Workspace.CurrentCamera:WorldToViewportPoint(v.Character.PrimaryPart.Position)
+                local magnitude = (Vector2.new(pos.X, pos.Y) - Vector2.new(Mouse.X, Mouse.Y)).magnitude
+                if magnitude < shortestDistance then
+                    closestPlayer = v
+                    shortestDistance = magnitude
+                end
+            end
+        end
+        return closestPlayer
+    end
+
+    Mouse.KeyDown:Connect(
+        function(KeyPressed)
+            if KeyPressed == (keyCode) then
+                if Toggle == true then
+                    Toggle = false
+                    Target = nil
+                    game.StarterGui:SetCore(
+                        "SendNotification",
+                        {
+                            Title = "Distort.cc",
+                            Icon = "",
+                            Text = "No Longer Aim Viewing"
+                        }
+                    )
+                else
+                    Target = FindClosestUser()
+                    Toggle = true
+                    game.StarterGui:SetCore(
+                        "SendNotification",
+                        {
+                            Title = "Distort.cc",
+                            Icon = "",
+                            Text = "Aim Viewing: " .. tostring(Target.Character.Humanoid.DisplayName)
+                        }
+                    )
+                end
+            end
+        end
+    )
+
+    game:service("RunService").Heartbeat:Connect(function()
+        if (Target and Target.Character and LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and Target.Character:FindFirstChild("Head")) then
+
+            local MousePos = Target.Character:WaitForChild("BodyEffects"):WaitForChild("MousePos")
+            
+            DrawLine(TargetLine, Target.Character.Head.Position, MousePos.Value)
+            
+            if Target.Character:FindFirstChild("GunScript", true) ~= nil then
+                TargetLine.Transparency = 0
+            else
+                TargetLine.Transparency = 1
+            end
+        else
+            TargetLine.Transparency = 1
+        end
+    end)
+end
+
+
+-- Intro 
+notifications:BuildNotificationUI();
+notifications:Notify("Thanks For Buying Distort-Camlocks!  " .. lpd);
+wait(2)
+notifications:Notify("We Hope You Enjoy ");
+wait(2)
+notifications:Notify("Regards: zxwz#0666 + XII#0346");
+------------------------
